@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+*.h5
+cache/*
+!cache/.gitkeep
+log
+dataset/*
+!dataset/.gitkeep
+*node_modules*
+gray/*
