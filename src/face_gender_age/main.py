@@ -19,7 +19,7 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
-from util import loadCacheFunction, loadCacheVariable
+from src.util import loadCacheFunction, loadCacheVariable
 from src.face_gender_age import mat
 
 sys.modules['mat'] = mat

@@ -14,6 +14,8 @@ pip install -r requirements.txt
 |models/keras|kerasの学習済みモデル||
 |cache/|変数のキャッシュを保存する|中身はプッシュしない|
 |dataset|データの置き場所|中身はプッシュしない|
+|dataset/file/wiki_corp|https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/wiki_crop.tar|中身はプッシュしない|
+|dataset/file/imdb_crop|https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/imdb_crop.tar|中身はプッシュしない|
 
 ---
 
@@ -23,10 +25,20 @@ pip install -r requirements.txt
 ### Demo
 
 ```shell
+wget -P definition https://raw.githubusercontent.com/avelino/python-opencv-detect/master/haarcascade_eye.xml
+wget -P definition https://raw.githubusercontent.com/avelino/python-opencv-detect/master/haarcascade_frontalface_alt.xml
 python demo.py gender_age
 ```
 ### Train
+
+下記二つをdataset/fileに展開する
+
+https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/wiki_crop.tar
+https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/static/imdb_crop.tar
+
 ```shell
+wget -P definition https://raw.githubusercontent.com/avelino/python-opencv-detect/master/haarcascade_eye.xml
+wget -P definition https://raw.githubusercontent.com/avelino/python-opencv-detect/master/haarcascade_frontalface_alt.xml
 python train.py gender_age
 ```
 ---
