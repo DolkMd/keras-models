@@ -1,19 +1,35 @@
 # keras-models
 
 Python 3.7.13
-## Freeze 
 
-`conda env create -f conda-age-gender.yaml`
-`conda env export > conda-age-gender.yaml`
+## Introduction
 
+```shell
+pip install -r requirements.txt
+```
+### About Directory
 
 |ディレクトリ|内容|備考|
 |---|----|---|
 |models/keras|kerasの学習済みモデル||
 |cache/|変数のキャッシュを保存する|中身はプッシュしない|
-|dataset/file|データの置き場所|中身はプッシュしない|
-|njs|NodeJS用のモデルラッパー||
+|dataset|データの置き場所|中身はプッシュしない|
 
+---
+
+
+## Face Gender Age Model
+
+### Demo
+
+```shell
+python demo.py gender_age
+```
+### Train
+```shell
+python train.py gender_age
+```
+---
 ## keras-pythonモデルをJS用に変換
 
 ```bash
@@ -35,3 +51,8 @@ export KERAS_BACKEND=plaidml.keras.backend
 plaidml-setup
 python3 mac_intel_keras.py
 ```
+
+
+## Freeze
+
+` pip freeze > requirements.txt`

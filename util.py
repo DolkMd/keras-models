@@ -1,6 +1,5 @@
 import os, pickle
 from typing import Callable
-import asyncio
 
 def _save_pickle(path, result):
     print('save pickle', path)
@@ -25,4 +24,3 @@ def loadCacheVariable(path):
     if os.path.exists(path):
         return _load_pickle(path), save
     return None, save
-
