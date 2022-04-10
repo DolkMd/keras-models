@@ -1,10 +1,10 @@
+# https://github.com/imdeepmind/processed-imdb-wiki-dataset
 import numpy as np
 import datetime as date
 
 from dataclasses import dataclass
 from scipy.io import loadmat
 from dateutil.relativedelta import relativedelta
-
 
 @dataclass
 class FaceFile:
@@ -14,7 +14,8 @@ class FaceFile:
     face_score1: any
     face_score2: any
 
-wiki_mat         = 'dataset/file/wiki_crop/wiki.mat'
+wiki_mat = 'dataset/file/wiki_crop/wiki.mat'
+imdb_mat = 'imdb_crop/imdb.mat'
 def getFaceFilePaths() -> list:
     def wiki() -> list:
         wiki_data        = loadmat(wiki_mat)
